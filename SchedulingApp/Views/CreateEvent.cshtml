@@ -1,0 +1,27 @@
+﻿@{
+    PageData["title"] = "Create Event";
+}
+
+<section ng-controller="CreateEvent as controller">
+        <h1>Start Scheduling Your Event</h1>
+        <label>What's it called?</label>
+        <input type="text" ng-model="controller.toCreate.Title" placeholder="Enter name here" />
+        <label>Tell us a little about your event</label>
+        <textarea ng-model="controller.toCreate.Description"></textarea>
+        <label>Who's Invited?</label>
+        <input type="text" ng-model="addedAttendeeName" placeholder="Name" />
+        <input type="text" ng-model="addedAttendeeEmail" placeholder="Enter email" />
+        <button ng-click="controller.addAttendee(addedAttendeeName, addedAttendeeName)">Invite!</button>
+        <label>Currently inviting ...</label>
+        <ul ng-repeat="attendee in controller.Attendees">
+            <li>{{attendee.Name}} - {{attendee.Email}}</li>
+        </ul>
+        <label>When's it happening? (You can enter more than one date and have a vote on the date everyone finds preferable)</label>
+        <input type="date" ng-model="newDate" />
+        <button ng-click="controller.addDate(newDate)">Set Date!</button>
+        <label>Potential Dates</label>
+        <ul ng-repeat="date in controller.Times">
+            <li>{{controller.formatDate(date)}}</li>
+        </ul>
+        <button ng-click="controller.save()">Let's do it!</button>
+</section>

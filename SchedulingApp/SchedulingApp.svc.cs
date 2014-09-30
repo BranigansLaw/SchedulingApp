@@ -1,4 +1,3 @@
-using App.TestAngular.DAL;
 //------------------------------------------------------------------------------
 // <copyright file="WebDataService.svc.cs" company="Microsoft">
 //     Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -12,11 +11,10 @@ using System.Data.Services.Providers;
 using System.Linq;
 using System.ServiceModel.Web;
 using System.Web;
-using System.Data.Services.Providers;
 
-namespace App.DataServices
+namespace SchedulingApp
 {
-    public class Event : EntityFrameworkDataService<EventDataContext>
+    public class SchedulingAppService : EntityFrameworkDataService<EventDataContext>
     {
         // This method is called only once to initialize service-wide policies.
         public static void InitializeService(DataServiceConfiguration config)

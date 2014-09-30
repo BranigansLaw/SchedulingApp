@@ -14,6 +14,8 @@ namespace App.SchedulingApp
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.Ignore("SchedulingApp.svc");
+
             routes.Add("Default", new DefaultRoute());
         }
     }

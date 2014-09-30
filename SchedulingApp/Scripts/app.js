@@ -11,7 +11,7 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
         // ------------------------------------------------------------------------------------------------------------
 
         $stateProvider
-            .state('home', {
+            /*.state('home', {
                 url: '/',
                 templateUrl: '/views/index',
                 controller: 'HomeCtrl'
@@ -27,6 +27,11 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 layout: 'basic',
                 templateUrl: '/views/login',
                 controller: 'LoginCtrl'
+            })*/
+            .state('CreateEvent', {
+                url: '/',
+                templateUrl: '/views/createEvent',
+                controller: 'CreateEvent'
             })
             .state('otherwise', {
                 url: '*path',

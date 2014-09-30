@@ -3,7 +3,7 @@
 // Google Analytics Collection APIs Reference:
 // https://developers.google.com/analytics/devguides/collection/analyticsjs/
 
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['app.services'])
 
     // Path: /
     .controller('HomeCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
@@ -32,6 +32,45 @@ angular.module('app.controllers', [])
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
+    }])
+
+    // Path: /
+    .controller('CreateEvent', ['$scope', 'SchedulingAppService', function ($scope, SchedulingAppService) {
+        this.toCreate = {
+            Title: "",
+            Description: "",
+            Times: [],
+            Attendees: [],
+            Locations: []
+        };
+
+        this.addAttendee = function (name, email) {
+            this.toCreate.Attendees.push({
+                Name: name,
+                Email: email
+            });
+        };
+
+        this.formatDate = function (javascriptDate) {
+            return javascriptDate;
+        };
+
+        this.addDate = function (date) {
+            this.toCreate.Times.push({
+                Value: date
+            });
+        };
+
+        this.addLocation = function (name, address) {
+            this.toCreate.Locations.push({
+                Name: name,
+                Address: address
+            });
+        };
+
+        this.save = function () {
+            SchedulingAppService.CreateEvent(this.toCreate);
+        };
     }])
 
     // Path: /error/404

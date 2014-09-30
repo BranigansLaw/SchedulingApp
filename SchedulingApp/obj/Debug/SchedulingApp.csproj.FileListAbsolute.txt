@@ -94,6 +94,7 @@ C:\GIT\SchedulingApp\SchedulingApp\bin\ko\System.Spatial.resources.dll
 C:\GIT\SchedulingApp\SchedulingApp\bin\ru\System.Spatial.resources.dll
 C:\GIT\SchedulingApp\SchedulingApp\bin\zh-Hans\System.Spatial.resources.dll
 C:\GIT\SchedulingApp\SchedulingApp\bin\zh-Hant\System.Spatial.resources.dll
-C:\GIT\SchedulingApp\SchedulingApp\obj\Debug\SchedulingApp.csprojResolveAssemblyReference.cache
 C:\GIT\SchedulingApp\SchedulingApp\obj\Debug\App.SchedulingApp.dll
 C:\GIT\SchedulingApp\SchedulingApp\obj\Debug\App.SchedulingApp.pdb
+C:\GIT\SchedulingApp\SchedulingApp\obj\Debug\App.SchedulingApp.Migrations.Initial.resources
+C:\GIT\SchedulingApp\SchedulingApp\obj\Debug\SchedulingApp.csproj.GenerateResource.Cache
